@@ -26,7 +26,7 @@ An enterprise-grade system that enables real-time communication between prepaid 
 
 | Role | Username | Password | Access Scope |
 | :--- | :--- | :--- | :--- |
-| **Super Admin** | `superadmin` | `admin123` | Full system control, tariffs, users & fleet |
+| **Super Admin** | `admin` | `admin123` | Full system control, tariffs, users & fleet |
 | **Field Engineer** | `engineer` | `engineer123` | Meter hardware, valve control, socket logs |
 | **Support Staff** | `support` | `support123` | Customer registry, manual recharge issuance |
 | **Consumer** | `consumer` | `consumer123` | Personal meter balance, usage, online recharge |
