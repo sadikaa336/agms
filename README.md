@@ -1,6 +1,6 @@
-# Automated Prepaid Gas Metering Management System (DLMS/COSEM)
+# AGMS - Automated Gas Metering System
 
-An enterprise-grade system that enables real-time communication between prepaid gas meters, a Java Spring Boot communication & REST API server, MySQL database, and an Apple-inspired minimalist administrative & consumer web portal.
+An enterprise-grade prepaid gas metering platform that enables real-time communication between smart gas meters, a Java Spring Boot API server, MySQL database, and a modern administrative & consumer web portal.
 
 ---
 
@@ -26,7 +26,7 @@ An enterprise-grade system that enables real-time communication between prepaid 
 
 | Role | Username | Password | Access Scope |
 | :--- | :--- | :--- | :--- |
-| **Super Admin** | `superadmin` | `admin123` | Full system control, tariffs, users & fleet |
+| **Super Admin** | `admin` | `admin123` | Full system control, tariffs, users & fleet |
 | **Field Engineer** | `engineer` | `engineer123` | Meter hardware, valve control, socket logs |
 | **Support Staff** | `support` | `support123` | Customer registry, manual recharge issuance |
 | **Consumer** | `consumer` | `consumer123` | Personal meter balance, usage, online recharge |
