@@ -1,0 +1,26 @@
+# Apache Configuration for Automated Gas Meter Web Application (cPanel / public_html)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # 1. Do NOT rewrite requests directed to the PHP API
+    RewriteRule ^api/ - [L]
+
+    # 2. Serve static files directly if they exist
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    # 3. Route all client-side navigation (e.g. /simulator, /meters, /customers) to index.html
+    RewriteRule ^ index.html [L]
+</IfModule>
+
+# Caching & MIME settings for modern web assets
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/html "access plus 0 seconds"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+</IfModule>

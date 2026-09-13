@@ -1,0 +1,17 @@
+com\gasmeter\api\model\AuditLog.class
+com\gasmeter\api\repository\UserRepository.class
+com\gasmeter\api\model\Customer.class
+com\gasmeter\api\model\User.class
+com\gasmeter\api\repository\RechargeRepository.class
+com\gasmeter\api\service\MeterService.class
+com\gasmeter\api\communication\GasMeterSocketServer.class
+com\gasmeter\api\controller\MeterController.class
+com\gasmeter\api\repository\ConsumptionRepository.class
+com\gasmeter\api\model\GasMeter.class
+com\gasmeter\api\model\CommunicationLog.class
+com\gasmeter\api\model\Consumption.class
+com\gasmeter\api\model\Tariff.class
+com\gasmeter\api\GasMeterApiApplication.class
+com\gasmeter\api\repository\GasMeterRepository.class
+com\gasmeter\api\repository\CustomerRepository.class
+com\gasmeter\api\model\Recharge.class

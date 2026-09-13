@@ -1,0 +1,214 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-CRgXeuEm.js
+var tsrStartManifest = () => ({ routes: {
+	__root__: {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/__root.tsx",
+		children: [
+			"/",
+			"/consumer",
+			"/customers",
+			"/locations",
+			"/login",
+			"/logs",
+			"/meters",
+			"/monitoring",
+			"/recharges",
+			"/reports",
+			"/simulator",
+			"/tariffs",
+			"/users"
+		],
+		preloads: [
+			"/assets/index-C3L-kYfR.js",
+			"/assets/rolldown-runtime-QTnfLwEv.js",
+			"/assets/auth-context-BTO8UqXF.js",
+			"/assets/link-Cbmdbd5h.js"
+		],
+		scripts: [{ attrs: {
+			type: "module",
+			async: !0,
+			src: "/assets/index-C3L-kYfR.js"
+		} }]
+	},
+	"/": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/index.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/routes-DrCe8ac7.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/flame-D6q4Kxef.js",
+			"/assets/arrow-right-DSx589q4.js",
+			"/assets/coins-DCoFc3RT.js",
+			"/assets/plus-BKYHyY1i.js",
+			"/assets/wifi-B_7QvDi4.js",
+			"/assets/wifi-off-DCR98O0c.js",
+			"/assets/api-BMT0iQKV.js",
+			"/assets/AreaChart-OJbiucgo.js"
+		]
+	},
+	"/consumer": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/consumer.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/consumer-5XDyzwfF.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/flame-D6q4Kxef.js",
+			"/assets/power-DhCtuCjU.js",
+			"/assets/api-BMT0iQKV.js",
+			"/assets/AreaChart-OJbiucgo.js"
+		]
+	},
+	"/customers": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/customers.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/customers-B9EIJzr9.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/navigation-BlQL3ek5.js",
+			"/assets/data-table-CSqqRTkl.js",
+			"/assets/refresh-cw-D-f-8ddy.js",
+			"/assets/trash-2-DfFSERZa.js",
+			"/assets/user-plus-DyKHiiSL.js",
+			"/assets/x-RK1XQpXv.js",
+			"/assets/api-BMT0iQKV.js"
+		]
+	},
+	"/locations": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/locations.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/locations-DClGIg5B.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/flame-D6q4Kxef.js",
+			"/assets/navigation-BlQL3ek5.js",
+			"/assets/data-table-CSqqRTkl.js",
+			"/assets/layers-D1-9MHft.js",
+			"/assets/plus-BKYHyY1i.js",
+			"/assets/refresh-cw-D-f-8ddy.js",
+			"/assets/trash-2-DfFSERZa.js",
+			"/assets/x-RK1XQpXv.js",
+			"/assets/api-BMT0iQKV.js"
+		]
+	},
+	"/login": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/login.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/login-D7jw0_ik.js",
+			"/assets/flame-D6q4Kxef.js",
+			"/assets/arrow-right-DSx589q4.js",
+			"/assets/key-round-Cz1PkCBb.js",
+			"/assets/lock-B-rUkILC.js",
+			"/assets/api-BMT0iQKV.js"
+		]
+	},
+	"/logs": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/logs.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/logs-D0DzhUf4.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/flame-D6q4Kxef.js",
+			"/assets/data-table-CSqqRTkl.js",
+			"/assets/refresh-cw-D-f-8ddy.js",
+			"/assets/api-BMT0iQKV.js"
+		]
+	},
+	"/meters": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/meters.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/meters-DRbVmSKz.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/data-table-CSqqRTkl.js",
+			"/assets/lock-B-rUkILC.js",
+			"/assets/plus-BKYHyY1i.js",
+			"/assets/power-DhCtuCjU.js",
+			"/assets/refresh-cw-D-f-8ddy.js",
+			"/assets/trash-2-DfFSERZa.js",
+			"/assets/x-RK1XQpXv.js",
+			"/assets/api-BMT0iQKV.js"
+		]
+	},
+	"/monitoring": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/monitoring.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/monitoring-yeFa34Ir.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/plus-BKYHyY1i.js",
+			"/assets/refresh-cw-D-f-8ddy.js",
+			"/assets/wifi-B_7QvDi4.js",
+			"/assets/wifi-off-DCR98O0c.js",
+			"/assets/api-BMT0iQKV.js"
+		]
+	},
+	"/recharges": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/recharges.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/recharges-C4fmUxdg.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/data-table-CSqqRTkl.js",
+			"/assets/refresh-cw-D-f-8ddy.js",
+			"/assets/x-RK1XQpXv.js",
+			"/assets/api-BMT0iQKV.js"
+		]
+	},
+	"/reports": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/reports.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/reports-dSWwwviS.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/flame-D6q4Kxef.js"
+		]
+	},
+	"/simulator": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/simulator.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/simulator-C-EDQWif.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/flame-D6q4Kxef.js",
+			"/assets/coins-DCoFc3RT.js",
+			"/assets/key-round-Cz1PkCBb.js",
+			"/assets/power-DhCtuCjU.js",
+			"/assets/refresh-cw-D-f-8ddy.js",
+			"/assets/wifi-B_7QvDi4.js",
+			"/assets/api-BMT0iQKV.js"
+		]
+	},
+	"/tariffs": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/tariffs.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/tariffs-CA35aoIR.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/data-table-CSqqRTkl.js",
+			"/assets/layers-D1-9MHft.js",
+			"/assets/plus-BKYHyY1i.js",
+			"/assets/refresh-cw-D-f-8ddy.js",
+			"/assets/shield-alert-D1P4xwNl.js",
+			"/assets/trash-2-DfFSERZa.js",
+			"/assets/x-RK1XQpXv.js",
+			"/assets/api-BMT0iQKV.js"
+		]
+	},
+	"/users": {
+		filePath: "C:/Users/DIDAR/Desktop/Sadika Versity Project/Automated Gas Meter Software/frontend/src/routes/users.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/users-BuklWGPx.js",
+			"/assets/admin-layout-qqjE2JPe.js",
+			"/assets/data-table-CSqqRTkl.js",
+			"/assets/refresh-cw-D-f-8ddy.js",
+			"/assets/shield-alert-D1P4xwNl.js",
+			"/assets/trash-2-DfFSERZa.js",
+			"/assets/user-plus-DyKHiiSL.js",
+			"/assets/x-RK1XQpXv.js",
+			"/assets/api-BMT0iQKV.js"
+		]
+	}
+} });
+//#endregion
+export { tsrStartManifest };

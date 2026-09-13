@@ -1,0 +1,365 @@
+import { i as __toESM } from "../_runtime.mjs";
+import { n as require_jsx_runtime, r as require_react } from "../_libs/react+tanstack__react-query.mjs";
+import { a as useAuth, r as ROLE_CONFIG } from "./auth-context-Bn8DClbS.mjs";
+import { _ as useNavigate, g as Link, l as useRouterState } from "../_libs/@tanstack/react-router+[...].mjs";
+import { $ as Activity, A as LayoutDashboard, B as FileChartColumnIncreasing, D as LogOut, E as MapPin, L as Flame, N as House, O as LogIn, P as Gauge, U as CreditCard, a as Users, c as UserCog, f as SlidersVertical, g as Search, p as Shield, v as Receipt, y as Radio } from "../_libs/lucide-react.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/admin-layout-CbX8iDgK.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
+var import_jsx_runtime = require_jsx_runtime();
+function AdminSidebar() {
+	const pathname = useRouterState({ select: (s) => s.location.pathname });
+	const { user, role, logout } = useAuth();
+	const navigate = useNavigate();
+	const roleConfig = ROLE_CONFIG[role];
+	const getNavItems = () => {
+		if (role === "CONSUMER") return [{
+			to: "/consumer",
+			label: "My Gas Meter",
+			icon: House
+		}, {
+			to: "/recharges",
+			label: "Recharge History",
+			icon: CreditCard
+		}];
+		if (role === "FIELD_ENGINEER") return [
+			{
+				to: "/",
+				label: "Dashboard",
+				icon: LayoutDashboard
+			},
+			{
+				to: "/simulator",
+				label: "Meter Simulator",
+				icon: SlidersVertical
+			},
+			{
+				to: "/meters",
+				label: "Meter Hardware",
+				icon: Gauge
+			},
+			{
+				to: "/monitoring",
+				label: "Live Telemetry",
+				icon: Activity
+			},
+			{
+				to: "/locations",
+				label: "Locations & Zoning",
+				icon: MapPin
+			},
+			{
+				to: "/logs",
+				label: "DLMS Frame Logs",
+				icon: Radio
+			},
+			{
+				to: "/reports",
+				label: "Fleet Reports",
+				icon: FileChartColumnIncreasing
+			}
+		];
+		if (role === "SUPPORT_STAFF") return [
+			{
+				to: "/",
+				label: "Dashboard",
+				icon: LayoutDashboard
+			},
+			{
+				to: "/simulator",
+				label: "Meter Simulator",
+				icon: SlidersVertical
+			},
+			{
+				to: "/customers",
+				label: "Customers",
+				icon: Users
+			},
+			{
+				to: "/locations",
+				label: "Locations & Zoning",
+				icon: MapPin
+			},
+			{
+				to: "/meters",
+				label: "Meter Registry",
+				icon: Gauge
+			},
+			{
+				to: "/recharges",
+				label: "Manual Recharge",
+				icon: CreditCard
+			},
+			{
+				to: "/reports",
+				label: "Billing Reports",
+				icon: FileChartColumnIncreasing
+			}
+		];
+		return [
+			{
+				to: "/",
+				label: "Dashboard",
+				icon: LayoutDashboard
+			},
+			{
+				to: "/simulator",
+				label: "Meter Simulator",
+				icon: SlidersVertical
+			},
+			{
+				to: "/customers",
+				label: "Customers",
+				icon: Users
+			},
+			{
+				to: "/locations",
+				label: "Locations & Zoning",
+				icon: MapPin
+			},
+			{
+				to: "/meters",
+				label: "Meters",
+				icon: Gauge
+			},
+			{
+				to: "/monitoring",
+				label: "Live Monitoring",
+				icon: Activity
+			},
+			{
+				to: "/tariffs",
+				label: "Tariffs",
+				icon: Receipt
+			},
+			{
+				to: "/recharges",
+				label: "Recharges",
+				icon: CreditCard
+			},
+			{
+				to: "/reports",
+				label: "Reports",
+				icon: FileChartColumnIncreasing
+			},
+			{
+				to: "/logs",
+				label: "Communication",
+				icon: Radio
+			},
+			{
+				to: "/users",
+				label: "Users & Roles",
+				icon: UserCog
+			}
+		];
+	};
+	const navItems = getNavItems();
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("aside", {
+		className: "hidden lg:flex fixed inset-y-0 left-0 w-[250px] flex-col border-r border-sidebar-border bg-sidebar z-30",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "h-16 flex items-center gap-2.5 px-6 border-b border-sidebar-border",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "h-9 w-9 rounded-xl bg-primary text-primary-foreground grid place-items-center",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Flame, { className: "h-5 w-5" })
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "text-[14px] font-semibold tracking-tight leading-tight",
+					children: "Automated Gas Meter"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "text-[10px] text-muted-foreground",
+					children: "Prepaid Management Software"
+				})] })]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
+				className: "flex-1 overflow-y-auto p-3 space-y-0.5",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+					className: "px-3 pt-3 pb-2 text-[11px] font-medium uppercase tracking-wider text-muted-foreground",
+					children: role === "CONSUMER" ? "Consumer Portal" : "Management"
+				}), navItems.map((item) => {
+					const active = pathname === item.to;
+					const Icon = item.icon;
+					return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+						to: item.to,
+						className: ["flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm transition-colors", active ? "bg-accent text-accent-foreground font-semibold" : "text-foreground/70 hover:bg-accent/60 hover:text-foreground"].join(" "),
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Icon, {
+								className: ["h-[18px] w-[18px]", active ? "text-primary" : "text-muted-foreground"].join(" "),
+								strokeWidth: 1.75
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: item.label }),
+							active && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "ml-auto h-1.5 w-1.5 rounded-full bg-primary" })
+						]
+					}, item.to);
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "p-3 border-t border-sidebar-border",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "rounded-xl bg-accent/60 p-2.5 flex items-center gap-2.5 border border-border/40",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+							className: "h-8 w-8 rounded-full bg-primary text-primary-foreground grid place-items-center text-xs font-bold uppercase shrink-0",
+							children: (user?.username || "AD").slice(0, 2)
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+							className: "min-w-0 flex-1",
+							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "text-xs font-semibold truncate text-foreground",
+								children: user?.username || "Administrator"
+							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+								className: "text-[10px] font-medium text-primary truncate",
+								children: roleConfig.label
+							})]
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", {
+							onClick: () => {
+								logout();
+								navigate({ to: "/login" });
+							},
+							className: "h-7 w-7 rounded-lg text-muted-foreground hover:text-destructive hover:bg-destructive/10 grid place-items-center transition shrink-0",
+							title: "Sign Out",
+							children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(LogOut, { className: "h-3.5 w-3.5" })
+						})
+					]
+				})
+			})
+		]
+	});
+}
+function AdminTopbar({ title, subtitle }) {
+	const { user, role, switchRole, isAuthenticated, logout } = useAuth();
+	const navigate = useNavigate();
+	ROLE_CONFIG[role];
+	const handleLogout = () => {
+		logout();
+		navigate({ to: "/login" });
+	};
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("header", {
+		className: "sticky top-0 z-20 bg-background/80 backdrop-blur-md border-b border-border",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "h-16 flex items-center gap-4 px-6 md:px-8",
+			children: [
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex-1 min-w-0",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+						className: "text-[15px] font-semibold text-foreground truncate",
+						children: title
+					}), subtitle && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-[12px] text-muted-foreground truncate",
+						children: subtitle
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "hidden md:flex items-center h-10 w-[300px] rounded-[10px] border border-border bg-card px-3.5 gap-2.5 focus-within:ring-2 focus-within:ring-ring/40 transition",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Search, { className: "h-4 w-4 text-muted-foreground" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("input", {
+						placeholder: "Search meters, customers, tokens…",
+						className: "flex-1 bg-transparent outline-none text-xs placeholder:text-muted-foreground"
+					})]
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+					className: "flex items-center gap-2 bg-accent/60 p-1.5 rounded-xl border border-border",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shield, { className: "h-4 w-4 text-primary ml-1.5 shrink-0" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("select", {
+						value: role,
+						onChange: (e) => switchRole(e.target.value),
+						className: "bg-transparent text-xs font-semibold text-foreground outline-none cursor-pointer pr-1",
+						title: "Switch active user role",
+						children: [
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+								value: "SUPER_ADMIN",
+								className: "bg-card text-foreground",
+								children: "Super Admin"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+								value: "FIELD_ENGINEER",
+								className: "bg-card text-foreground",
+								children: "Field Engineer"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+								value: "SUPPORT_STAFF",
+								className: "bg-card text-foreground",
+								children: "Support Staff"
+							}),
+							/* @__PURE__ */ (0, import_jsx_runtime.jsx)("option", {
+								value: "CONSUMER",
+								className: "bg-card text-foreground",
+								children: "Consumer Portal"
+							})
+						]
+					})]
+				}),
+				isAuthenticated ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("button", {
+					onClick: handleLogout,
+					className: "h-10 px-3 rounded-xl border border-border hover:bg-destructive/10 hover:text-destructive hover:border-destructive/30 text-xs font-medium inline-flex items-center gap-1.5 transition text-muted-foreground",
+					title: "Sign out of system",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LogOut, { className: "h-3.5 w-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "hidden sm:inline",
+						children: "Sign Out"
+					})]
+				}) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Link, {
+					to: "/login",
+					className: "h-10 px-3 rounded-xl border border-border hover:bg-accent text-xs font-medium inline-flex items-center gap-1.5 transition text-foreground",
+					title: "Login as user",
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LogIn, { className: "h-3.5 w-3.5" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "hidden sm:inline",
+						children: "Sign In"
+					})]
+				})
+			]
+		})
+	});
+}
+function AdminLayout({ title, subtitle, children }) {
+	const { isAuthenticated, role } = useAuth();
+	const navigate = useNavigate();
+	(0, import_react.useEffect)(() => {
+		if (!isAuthenticated) navigate({ to: "/login" });
+		else if (role === "CONSUMER") navigate({ to: "/consumer" });
+	}, [
+		isAuthenticated,
+		role,
+		navigate
+	]);
+	if (!isAuthenticated) return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: "min-h-screen bg-background flex items-center justify-center p-4",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "text-center space-y-3",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "h-8 w-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "text-xs text-muted-foreground font-medium",
+				children: "Authenticating, redirecting to login..."
+			})]
+		})
+	});
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+		className: "min-h-screen bg-background",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AdminSidebar, {}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "lg:pl-[250px]",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(AdminTopbar, {
+				title,
+				subtitle
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("main", {
+				className: "p-6 md:p-8 space-y-6",
+				children
+			})]
+		})]
+	});
+}
+function Card({ children, className = "" }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+		className: ["bg-card rounded-[14px] border border-border p-6 shadow-[var(--shadow-card)]", className].join(" "),
+		children
+	});
+}
+function StatusPill({ tone, children }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", {
+		className: ["inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-[11px] font-medium", {
+			success: "bg-[oklch(0.75_0.15_160/0.12)] text-[oklch(0.5_0.15_160)]",
+			warning: "bg-[oklch(0.81_0.145_78/0.18)] text-[oklch(0.5_0.13_78)]",
+			error: "bg-[oklch(0.7_0.19_15/0.12)] text-[oklch(0.55_0.19_15)]",
+			info: "bg-[oklch(0.68_0.16_250/0.12)] text-[oklch(0.5_0.16_250)]",
+			muted: "bg-muted text-muted-foreground"
+		}[tone]].join(" "),
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "h-1.5 w-1.5 rounded-full bg-current opacity-70" }), children]
+	});
+}
+//#endregion
+export { Card as n, StatusPill as r, AdminLayout as t };

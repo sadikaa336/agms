@@ -1,0 +1,12 @@
+# Apache URL Rewrite for PHP REST API
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /api/
+    
+    # Allow real files and directories to be served directly
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    
+    # Route all API calls to index.php
+    RewriteRule ^(.*)$ index.php [QSA,L]
+</IfModule>

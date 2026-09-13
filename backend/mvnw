@@ -1,0 +1,13 @@
+#!/bin/sh
+# ----------------------------------------------------------------------------
+# Maven Wrapper Redirect Script
+# ----------------------------------------------------------------------------
+
+MAVEN_CMD="c:/Users/didar/OneDrive/Desktop/Automated Gas Meter Software/.maven/apache-maven-3.9.16/bin/mvn"
+
+if [ ! -f "$MAVEN_CMD" ]; then
+    echo "Error: Local Maven command not found at $MAVEN_CMD"
+    exit 1
+fi
+
+exec "$MAVEN_CMD" "$@"

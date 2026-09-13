@@ -1,0 +1,115 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/api-DRGUSpxz.js
+var BASE_URL = typeof window !== "undefined" ? "" : "http://localhost:8080";
+async function request(endpoint, options) {
+	const url = `${BASE_URL}${endpoint}`;
+	try {
+		const res = await fetch(url, {
+			...options,
+			headers: {
+				"Content-Type": "application/json",
+				Accept: "application/json",
+				...options?.headers || {}
+			}
+		});
+		if (!res.ok) {
+			let errMsg = `Request failed: ${res.status} ${res.statusText}`;
+			try {
+				const errorData = await res.json();
+				if (errorData?.error) errMsg = errorData.error;
+			} catch {}
+			throw new Error(errMsg);
+		}
+		if (res.status === 204) return {};
+		return await res.json();
+	} catch (err) {
+		console.warn(`API Error [${endpoint}]:`, err.message);
+		throw err;
+	}
+}
+var api = {
+	login: (credentials) => request("/api/auth/login", {
+		method: "POST",
+		body: JSON.stringify(credentials)
+	}),
+	getDashboardStats: () => request("/api/dashboard/stats"),
+	getMeters: () => request("/api/meters"),
+	getMeterById: (id) => request(`/api/meters/${id}`),
+	createMeter: (meter, customerId) => request(`/api/meters${customerId ? `?customerId=${customerId}` : ""}`, {
+		method: "POST",
+		body: JSON.stringify(meter)
+	}),
+	updateMeter: (id, meter, customerId) => request(`/api/meters/${id}${customerId ? `?customerId=${customerId}` : ""}`, {
+		method: "PUT",
+		body: JSON.stringify(meter)
+	}),
+	toggleValve: (id, valveStatus) => request(`/api/meters/${id}/valve`, {
+		method: "POST",
+		body: JSON.stringify({ valveStatus })
+	}),
+	deleteMeter: (id) => request(`/api/meters/${id}`, { method: "DELETE" }),
+	sendTelemetry: (telemetry) => request("/api/meters/telemetry", {
+		method: "POST",
+		body: JSON.stringify(telemetry)
+	}),
+	getCustomers: () => request("/api/customers"),
+	getCustomerById: (id) => request(`/api/customers/${id}`),
+	createCustomer: (customer) => request("/api/customers", {
+		method: "POST",
+		body: JSON.stringify(customer)
+	}),
+	updateCustomer: (id, customer) => request(`/api/customers/${id}`, {
+		method: "PUT",
+		body: JSON.stringify(customer)
+	}),
+	deleteCustomer: (id) => request(`/api/customers/${id}`, { method: "DELETE" }),
+	getTariffs: () => request("/api/tariffs"),
+	createTariff: (tariff) => request("/api/tariffs", {
+		method: "POST",
+		body: JSON.stringify(tariff)
+	}),
+	updateTariff: (id, tariff) => request(`/api/tariffs/${id}`, {
+		method: "PUT",
+		body: JSON.stringify(tariff)
+	}),
+	deleteTariff: (id) => request(`/api/tariffs/${id}`, { method: "DELETE" }),
+	getRecharges: () => request("/api/recharges"),
+	createRecharge: (meterId, amount, paymentMethod) => request("/api/recharges", {
+		method: "POST",
+		body: JSON.stringify({
+			meterId,
+			amount,
+			paymentMethod
+		})
+	}),
+	getCommunicationLogs: () => request("/api/logs/communication"),
+	getAuditLogs: () => request("/api/logs/audit"),
+	getUsers: () => request("/api/users"),
+	createUser: (user) => request("/api/users", {
+		method: "POST",
+		body: JSON.stringify(user)
+	}),
+	deleteUser: (id) => request(`/api/users/${id}`, { method: "DELETE" }),
+	getLocationsSummary: () => request("/api/locations/summary"),
+	createDivision: (data) => request("/api/locations/divisions", {
+		method: "POST",
+		body: JSON.stringify(data)
+	}),
+	deleteDivision: (id) => request(`/api/locations/divisions/${id}`, { method: "DELETE" }),
+	createDistrict: (data) => request("/api/locations/districts", {
+		method: "POST",
+		body: JSON.stringify(data)
+	}),
+	deleteDistrict: (id) => request(`/api/locations/districts/${id}`, { method: "DELETE" }),
+	createArea: (data) => request("/api/locations/areas", {
+		method: "POST",
+		body: JSON.stringify(data)
+	}),
+	deleteArea: (id) => request(`/api/locations/areas/${id}`, { method: "DELETE" }),
+	createProject: (data) => request("/api/locations/projects", {
+		method: "POST",
+		body: JSON.stringify(data)
+	}),
+	deleteProject: (id) => request(`/api/locations/projects/${id}`, { method: "DELETE" })
+};
+//#endregion
+export { api as t };
